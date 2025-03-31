@@ -1,0 +1,66 @@
+import sentencepiece as spm
+import torch
+import transformers
+import faiss
+import numpy as np
+from efficientnet_pytorch import EfficientNet
+from transformers import BertTokenizer, BertModel
+
+# 1. Coleta de Dados (Simulação)
+logs_usuario = ["nike air force 1", "nike dunk low", "nike react"]  # Exemplo
+
+# Criando dataset para treinar SentencePiece
+with open("logs_dataset.txt", "w", encoding="utf-8") as f:
+    for log in logs_usuario:
+        f.write(log + "\n")
+
+# Treinando SentencePiece
+spm.SentencePieceTrainer.Train("--input=logs_dataset.txt --model_prefix=bpe --vocab_size=70 --model_type=bpe")
+
+# 2. Tokenização com SentencePiece-BPE
+sp = spm.SentencePieceProcessor()
+sp.Load("bpe.model")  # Modelo treinado previamente
+logs_tokenizados = [sp.encode_as_pieces(log) for log in logs_usuario]
+
+# 3. Treinamento e Previsão com BERT4Rec
+class BERT4Rec(torch.nn.Module):
+    def __init__(self):
+        super(BERT4Rec, self).__init__()
+        self.bert = BertModel.from_pretrained("bert-base-uncased")
+    
+    def forward(self, input_ids, attention_mask):
+        return self.bert(input_ids, attention_mask=attention_mask).last_hidden_state
+
+bert4rec = BERT4Rec()
+tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
+inputs = tokenizer(logs_usuario, padding=True, truncation=True, return_tensors="pt")
+predictions = bert4rec(inputs["input_ids"], inputs["attention_mask"])
+
+# 4. Extração de Features Visuais com EfficientNet-B4
+def extrair_features_imagem(modelo, caminho_imagem):
+    from PIL import Image
+    import torchvision.transforms as transforms
+    
+    transform = transforms.Compose([
+        transforms.Resize((224, 224)),
+        transforms.ToTensor(),
+    ])
+    
+    imagem = Image.open(caminho_imagem).convert("RGB")
+    imagem = transform(imagem).unsqueeze(0)
+    
+    with torch.no_grad():
+        features = modelo.extract_features(imagem)
+    
+    return features.view(-1).numpy()
+
+modelo_effnet = EfficientNet.from_pretrained("efficientnet-b4")
+features_exemplo = extrair_features_imagem(modelo_effnet, "nike_air_force_1.jpg")
+
+# 5. Indexação e Busca com Faiss
+index = faiss.IndexFlatL2(1792)  # Tamanho da saída do EfficientNet-B4
+index.add(np.array([features_exemplo]))
+
+D, I = index.search(np.array([features_exemplo]), k=5)  # Buscar 5 similares
+print("Recomendações encontradas:", I)
+
