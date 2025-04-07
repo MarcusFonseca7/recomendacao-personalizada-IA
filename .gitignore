@@ -1,0 +1,37 @@
+# Ambiente virtual
+venv/
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Arquivos e modelos gerados pelo SentencePiece
+bpe.model
+bpe.vocab
+
+# Dataset de logs pré-processado
+logs_dataset.txt
+
+# Arquivos temporários
+*.log
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+
+# VS Code
+.vscode/
+
+# Modelos treinados e arquivos grandes (caso tenha)
+*.h5
+*.pt
+*.ckpt
+*.onnx
+*.model
+
+# Arquivos de pacotes
+*.egg-info/
+dist/
+build/

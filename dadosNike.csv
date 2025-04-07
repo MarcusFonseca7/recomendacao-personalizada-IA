@@ -1,0 +1,31 @@
+usuario_id;produto;categoria;cor;acao
+1;Air Max Plus;Tênis;Preto;visualizou
+1;React Infinity Run;Tênis;Branco;adicionou_ao_carrinho
+2;Pegasus 39;Tênis;Azul;visualizou
+2;Air Max Plus;Tênis;Preto;comprou
+3;Zoom Fly 5;Tênis;Preto;visualizou
+3;Vomero 16;Tênis;Cinza;adicionou_ao_carrinho
+4;React Infinity Run;Tênis;Branco;visualizou
+4;Pegasus 39;Tênis;Branco;visualizou
+5;Air Max Pulse;Tênis;Preto;visualizou
+5;ZoomX Vaporfly;Tênis;Vermelho;comprou
+6;InfinityRN 4;Tênis;Branco;visualizou
+6;Zoom Fly 5;Tênis;Preto;adicionou_ao_carrinho
+7;Invincible 3;Tênis;Cinza;visualizou
+7;Pegasus Trail 4;Tênis;Verde;visualizou
+8;Nike Motiva;Tênis;Preto;comprou
+8;ReactX;Tênis;Preto;visualizou
+9;InfinityRN 4;Tênis;Branco;visualizou
+9;Air Max Pulse;Tênis;Preto;visualizou
+10;Vomero 17;Tênis;Branco;visualizou
+10;ZoomX Vaporfly;Tênis;Vermelho;adicionou_ao_carrinho
+11;ReactX;Tênis;Preto;visualizou
+11;Air Max Plus;Tênis;Preto;visualizou
+12;Zoom Fly 5;Tênis;Preto;comprou
+12;Vomero 16;Tênis;Cinza;visualizou
+13;Pegasus 39;Tênis;Azul;visualizou
+13;React Infinity Run;Tênis;Branco;adicionou_ao_carrinho
+14;InfinityRN 4;Tênis;Branco;comprou
+14;Nike Motiva;Tênis;Preto;visualizou
+15;Vomero 17;Tênis;Branco;visualizou
+15;Invincible 3;Tênis;Cinza;visualizou
