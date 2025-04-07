@@ -38,6 +38,6 @@ O sistema é composto pelos seguintes componentes principais:
 
 
 ## Autores
-Caique Almeida
-Marcus Fonseca
-Nicholas Silva
+- Caique Almeida
+- Marcus Fonseca
+- Nicholas Silva
