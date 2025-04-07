@@ -12,6 +12,8 @@ O sistema é composto pelos seguintes componentes principais:
    - Treinado com Masked Language Model para prever interações futuras.
    - Utiliza Transformers para codificar sequências de interações dos usuários.
    - Prediz produtos de interesse com base em padrões comportamentais.
+
+   ### Próximos passos:
 4. **Modelo EfficientNet-B4:**
    - Extrai embeddings visuais das imagens dos produtos.
    - Permite recomendações baseadas na aparência dos itens visitados.
