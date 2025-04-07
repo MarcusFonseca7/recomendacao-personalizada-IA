@@ -25,7 +25,7 @@ O sistema é composto pelos seguintes componentes principais:
 - Python
 
 
-##Instruções de uso:
+## Instruções de uso:
 
 1. Copie e cole no terminal da sua IDE: "git clone https://github.com/MarcusFonseca7/recomendacao-personalizada-IA.git"
 2. Acesse o diretório, cole: "cd recomendacao-personalizada-IA"
@@ -35,3 +35,9 @@ O sistema é composto pelos seguintes componentes principais:
 6. Se estiver ativado aparecerá (venv) ao começo do caminho da pasta
 7. Instale as bibliotecas: "pip install -r requirements.txt" (pode demorar algum tempo...)
 8. Agora só rodar o código e esperar o resultado aparecer no terminal!: "python anuncio.py"
+
+
+## Autores
+Caique Almeida
+Marcus Fonseca
+Nicholas Silva
