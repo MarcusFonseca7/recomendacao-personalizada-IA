@@ -1,10 +1,5 @@
-transformers==4.40.1
-datasets==2.18.0
-sentencepiece==0.1.99
-torch==2.2.2
-timm==0.9.16
-faiss-cpu==1.7.4
-pandas==2.2.2
-numpy==1.26.4
-scikit-learn==1.4.1.post1
-Pillow==10.3.0
+sentencepiece==0.1.96
+torch==1.13.1 
+transformers==4.30.0  
+pandas==1.5.3  
+numpy==1.23.5  
