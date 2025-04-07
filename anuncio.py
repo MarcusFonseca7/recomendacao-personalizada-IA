@@ -1,3 +1,16 @@
+import warnings
+import os
+from transformers import logging
+
+# Silencia avisos Python
+warnings.filterwarnings("ignore")
+
+# Silencia logs do SentencePiece
+os.environ['FLAGS_sentencepiece_warning_level'] = 'FATAL'
+
+# Silencia logs da transformers
+logging.set_verbosity_error()
+
 # Bibliotecas principais
 import sentencepiece as spm
 import re
