@@ -23,3 +23,15 @@ O sistema é composto pelos seguintes componentes principais:
 
 **Linguagem utilizada:**
 - Python
+
+
+##Instruções de uso:
+
+1. Copie e cole no terminal da sua IDE: "git clone https://github.com/MarcusFonseca7/recomendacao-personalizada-IA.git"
+2. Acesse o diretório, cole: "cd recomendacao-personalizada-IA"
+3. Entre no diretório: "code ."
+4. Crie o ambiente virtual: "python -m venv venv"
+5. Ative ele: "venv\Scripts\activate"
+6. Se estiver ativado aparecerá (venv) ao começo do caminho da pasta
+7. Instale as bibliotecas: "pip install -r requirements.txt" (pode demorar algum tempo...)
+8. Agora só rodar o código e esperar o resultado aparecer no terminal!: "python anuncio.py"

@@ -3,7 +3,6 @@ import sentencepiece as spm
 import re
 import torch
 import numpy as np
-from efficientnet_pytorch import EfficientNet
 from transformers import BertTokenizer, BertModel, BertForMaskedLM
 import pandas as pd
 from torch.utils.data import Dataset, DataLoader
